@@ -1,0 +1,41 @@
+<app-navbar></app-navbar>
+<app-side-navbar></app-side-navbar>
+<div class="container">
+    <div class="top">
+        <h1>Comunidad Luca</h1>
+        <button (click)="navigate()">NUEVA PREGUNTA</button>
+    </div>
+    <div class="type">
+        <ul>
+            <li><a class="active">POPULARES</a></li>
+            <li><a>NUEVOS</a></li>
+            <li><a>SEGUIDOS</a></li>
+        </ul>
+    </div>
+    <div class="posts">
+        <div class="item" *ngFor="let post of (posts | async)" [routerLink]=[post._id]>
+            <img class="avatar" src="assets/user.png">
+            <div class="text">
+                <h3>{{post.title}}</h3>
+                <p>{{post.publication}}</p>
+            </div>
+            <div class="comments">
+                <img src="assets/comment.svg"> 
+                <!--placeholder number of comments-->
+                56
+            </div>
+            <div class="like">
+                <img src="assets/t-up.svg">
+                <img src="assets/t-down.svg">
+            </div>
+            <div class="user">
+                <p><span class="pr">Pregunta</span> juan.c23 en <span class="sub">Matemáticas 6º</span></p>
+            </div>
+            <div class="share">
+                <img src="assets/share.svg">
+                <img src="assets/star.svg">
+            </div>
+        </div>
+        <button class="circle" (click)="navigate()"><img src="assets/pen.svg"></button>
+    </div>
+</div>

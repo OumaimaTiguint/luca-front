@@ -1,0 +1,12 @@
+<app-navbar></app-navbar>
+<app-side-navbar></app-side-navbar>
+<div class="container">
+    <div class="top">
+        <h1><strong>{{title}}</strong></h1>
+        <button (click)="navigate()">Regresa</button>
+    </div>
+    <hr/>
+    <p>{{publication}}</p>
+    <button class="btn btn-danger" (click)="delete()">Eliminar</button>
+    <button class="btn btn-dark" (click)="update()">Actualizar</button>
+</div>

@@ -1,0 +1,127 @@
+.container { width: 45%}
+.circle { display: none;}
+.type {
+    border-bottom: 1px solid #DBDBDB;
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    li {
+        display: inline;
+    }
+    a {
+        display: inline-block;
+        padding: 6px;
+        color: #9A9CB5;
+        text-align: center;
+        letter-spacing: 0.02em;
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 16px;
+        font-family: "Inter", sans-serif
+    }
+    a:hover, a:active, .active {
+        color: #3843D0;
+        border-bottom: 2px solid #3843D0;
+    }
+}
+.item {
+    display: grid;
+    grid-template-areas: 
+        "img text comments"
+        "like user share";
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid #DBDBDB;
+    h3 {
+        color: #4F4F4F;
+        font-size: 16px;
+        line-height: 16px;
+        font-family: "Inter", sans-serif;
+        font-weight: 600;
+    }
+    p {
+        width: 300px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        display: inherit;
+        color: #828282;
+        opacity: 0.7;
+        font-size: 13px;
+        line-height: 24px;
+        font-family: "Inter", sans-serif;
+        .sub {
+            color: #3843D0;
+            font-size: 13px;
+            line-height: 24px;
+            font-weight: 600;
+        }
+    }
+    .avatar {
+        background-color: #3843D0;
+        border-radius: 50%;
+        width: 40px;
+        padding: 2px
+    }
+    .like, .share {
+        img { 
+            width: 20px;
+            margin: 6px
+        }
+    }
+    .comments {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 24px;
+        color: #9A9CB5;
+        font-family: "Poppins", sans-serif;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .container { width: 100%}
+    .posts { width: 90%}
+    .item {
+        height: 160px;
+        p { 
+            width: 150px;
+            .pr { display: none;}
+        }
+        .avatar { margin: 10px}
+        .like{
+            img { 
+                width: 18px;
+                margin: 6px
+            }
+        }
+        .share {
+            display: flex;
+            flex: row;
+            img { 
+                width: 16px;
+                margin: 5px
+            }
+        }
+    }
+    .top { button { display: none}}
+    .circle {
+        display: block;
+        position: sticky;
+        border-radius: 50px;
+        box-shadow: 2px 2px 3px #999;
+        bottom: 12%;
+        left: 90%;
+        font-size: 0px;
+        width:60px;
+	    height:60px;
+        background-color: #3843D0;
+        img { 
+            display: block;
+            width: 35px;
+            margin: 0 auto;
+            padding-top: 5px
+        }
+    }
+}

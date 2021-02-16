@@ -1,0 +1,30 @@
+<app-side-navbar></app-side-navbar>
+<app-navbar></app-navbar>
+<div class="container">
+    <div class="top">
+        <h1>Haz una pregunta</h1>
+        <button (click)="navigate()"><span class="close">✕</span><span class="txt">Cancelar</span></button>
+    </div>
+    <form>
+        <div class="form-group">
+            <label for='title'>Título de publicación</label><br/>
+            <input 
+                name="title" 
+                [(ngModel)]="title" 
+                required 
+                type="text" 
+                placeholder="Escribe tu título aquí">
+        </div>
+        <div class="form-group">
+            <label for='publication'>Publicación</label><br/>
+            <textarea 
+                name="publication" 
+                [(ngModel)]="publication" 
+                required 
+                type="text" 
+                placeholder="Escribe tu publicación aquí">
+            </textarea>
+        </div>
+        <button (click)="submit()" type="submit">PUBLICAR</button>
+    </form>
+</div>
