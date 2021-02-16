@@ -10,7 +10,7 @@ MEAN stack
 
 ## Install
 ```
-git clone 
+git clone https://github.com/OumaimaTiguint/luca-front.git
 ```
 
 ```
